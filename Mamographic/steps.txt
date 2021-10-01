@@ -1,0 +1,14 @@
+pre processing
+
+* first combine the names in to the data file and save it as a csv 
+* theres a error in the first attribute in the name file it mentions that there are values (1-5) but theres a 55 as a value and i corrected
+it to 5.
+* for the missing values use the filter replace missing values
+* then for the age use discretizer filter and classify the age into 3 bins and to a nominal dataset
+* convert all the other fields to nominal using numeric to nominal fiter
+
+rule mining
+
+* apply apriori with 0.8 confidence with 10 rules and i got some good rules with 1.9 lift value that means those attributes are more 
+correlated
+* again apply the apriori with 0.7 metric with 20 rules 

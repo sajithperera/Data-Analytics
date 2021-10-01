@@ -1,0 +1,95 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 60 -T 0 -C 0.7 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     mammographic_masses_1-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R2-precision3-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToNominal-R3-weka.filters.unsupervised.attribute.NumericToNominal-R4-weka.filters.unsupervised.attribute.NumericToNominal-R5-weka.filters.unsupervised.attribute.NumericToNominal-R6-weka.filters.unsupervised.attribute.ReplaceMissingValues
+Instances:    961
+Attributes:   6
+              BI-RADS assessment
+              Age
+              Shape
+              Margin
+              Density
+              Severity
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.2 (192 instances)
+Minimum metric <confidence>: 0.7
+Number of cycles performed: 16
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 12
+
+Size of set of large itemsets L(2): 25
+
+Size of set of large itemsets L(3): 17
+
+Size of set of large itemsets L(4): 4
+
+Best rules found:
+
+ 1. Age='(44-70]' Severity=1 284 ==> Density=3 267    <conf:(0.94)> lift:(1.03) lev:(0.01) [8] conv:(1.43)
+ 2. BI-RADS assessment=5 Severity=1 305 ==> Density=3 285    <conf:(0.93)> lift:(1.03) lev:(0.01) [7] conv:(1.31)
+ 3. Severity=1 445 ==> Density=3 415    <conf:(0.93)> lift:(1.03) lev:(0.01) [10] conv:(1.3)
+ 4. Age='(44-70]' Shape=4 Severity=1 214 ==> Density=3 199    <conf:(0.93)> lift:(1.02) lev:(0) [4] conv:(1.21)
+ 5. BI-RADS assessment=4 Age='(44-70]' 342 ==> Density=3 318    <conf:(0.93)> lift:(1.02) lev:(0.01) [6] conv:(1.24)
+ 6. BI-RADS assessment=5 Shape=4 Severity=1 241 ==> Density=3 224    <conf:(0.93)> lift:(1.02) lev:(0.01) [4] conv:(1.21)
+ 7. Shape=1 224 ==> Density=3 208    <conf:(0.93)> lift:(1.02) lev:(0) [4] conv:(1.19)
+ 8. BI-RADS assessment=5 345 ==> Density=3 320    <conf:(0.93)> lift:(1.02) lev:(0.01) [6] conv:(1.2)
+ 9. Shape=4 Severity=1 327 ==> Density=3 303    <conf:(0.93)> lift:(1.02) lev:(0.01) [5] conv:(1.18)
+10. BI-RADS assessment=5 Shape=4 266 ==> Density=3 246    <conf:(0.92)> lift:(1.02) lev:(0) [4] conv:(1.15)
+11. Age='(44-70]' Shape=4 292 ==> Density=3 270    <conf:(0.92)> lift:(1.02) lev:(0) [4] conv:(1.15)
+12. BI-RADS assessment=4 Age='(44-70]' Severity=0 257 ==> Density=3 237    <conf:(0.92)> lift:(1.01) lev:(0) [3] conv:(1.11)
+13. BI-RADS assessment=5 Age='(44-70]' 216 ==> Density=3 199    <conf:(0.92)> lift:(1.01) lev:(0) [2] conv:(1.09)
+14. Age='(44-70]' 594 ==> Density=3 547    <conf:(0.92)> lift:(1.01) lev:(0.01) [6] conv:(1.12)
+15. Shape=4 431 ==> Density=3 395    <conf:(0.92)> lift:(1.01) lev:(0) [3] conv:(1.05)
+16. Age='(44-70]' Margin=1 224 ==> Density=3 205    <conf:(0.92)> lift:(1.01) lev:(0) [1] conv:(1.01)
+17. Margin=4 280 ==> Density=3 256    <conf:(0.91)> lift:(1.01) lev:(0) [1] conv:(1.01)
+18. BI-RADS assessment=5 Shape=4 Density=3 246 ==> Severity=1 224    <conf:(0.91)> lift:(1.97) lev:(0.11) [110] conv:(5.74)
+19. BI-RADS assessment=4 549 ==> Density=3 499    <conf:(0.91)> lift:(1) lev:(-0) [0] conv:(0.97)
+20. BI-RADS assessment=5 Shape=4 266 ==> Severity=1 241    <conf:(0.91)> lift:(1.96) lev:(0.12) [117] conv:(5.49)
+21. BI-RADS assessment=4 Margin=1 344 ==> Severity=0 311    <conf:(0.9)> lift:(1.68) lev:(0.13) [126] conv:(4.69)
+22. Age='(44-70]' Severity=0 310 ==> Density=3 280    <conf:(0.9)> lift:(0.99) lev:(-0) [-1] conv:(0.91)
+23. BI-RADS assessment=4 Margin=1 Density=3 308 ==> Severity=0 278    <conf:(0.9)> lift:(1.68) lev:(0.12) [112] conv:(4.6)
+24. BI-RADS assessment=4 Severity=0 428 ==> Density=3 386    <conf:(0.9)> lift:(0.99) lev:(-0) [-3] conv:(0.9)
+25. BI-RADS assessment=4 Margin=1 344 ==> Density=3 308    <conf:(0.9)> lift:(0.98) lev:(-0.01) [-4] conv:(0.84)
+26. BI-RADS assessment=4 Margin=1 Severity=0 311 ==> Density=3 278    <conf:(0.89)> lift:(0.98) lev:(-0.01) [-4] conv:(0.83)
+27. Shape=1 224 ==> Margin=1 200    <conf:(0.89)> lift:(2.12) lev:(0.11) [105] conv:(5.18)
+28. Margin=1 Density=3 Severity=0 312 ==> BI-RADS assessment=4 278    <conf:(0.89)> lift:(1.56) lev:(0.1) [99] conv:(3.82)
+29. BI-RADS assessment=5 Density=3 320 ==> Severity=1 285    <conf:(0.89)> lift:(1.92) lev:(0.14) [136] conv:(4.77)
+30. Severity=0 516 ==> Density=3 459    <conf:(0.89)> lift:(0.98) lev:(-0.01) [-10] conv:(0.81)
+31. Margin=1 405 ==> Density=3 359    <conf:(0.89)> lift:(0.97) lev:(-0.01) [-9] conv:(0.78)
+32. BI-RADS assessment=5 345 ==> Severity=1 305    <conf:(0.88)> lift:(1.91) lev:(0.15) [145] conv:(4.52)
+33. Margin=1 Severity=0 353 ==> Density=3 312    <conf:(0.88)> lift:(0.97) lev:(-0.01) [-9] conv:(0.76)
+34. Margin=1 Severity=0 353 ==> BI-RADS assessment=4 311    <conf:(0.88)> lift:(1.54) lev:(0.11) [109] conv:(3.52)
+35. Age='(-inf-44]' 223 ==> Density=3 196    <conf:(0.88)> lift:(0.97) lev:(-0.01) [-6] conv:(0.72)
+36. Margin=1 405 ==> Severity=0 353    <conf:(0.87)> lift:(1.62) lev:(0.14) [135] conv:(3.54)
+37. Margin=1 Density=3 359 ==> Severity=0 312    <conf:(0.87)> lift:(1.62) lev:(0.12) [119] conv:(3.46)
+38. Margin=1 Density=3 359 ==> BI-RADS assessment=4 308    <conf:(0.86)> lift:(1.5) lev:(0.11) [102] conv:(2.96)
+39. Age='(44-70]' Margin=1 224 ==> BI-RADS assessment=4 192    <conf:(0.86)> lift:(1.5) lev:(0.07) [64] conv:(2.91)
+40. Margin=1 405 ==> BI-RADS assessment=4 344    <conf:(0.85)> lift:(1.49) lev:(0.12) [112] conv:(2.8)
+41. Age='(44-70]' Density=3 Severity=0 280 ==> BI-RADS assessment=4 237    <conf:(0.85)> lift:(1.48) lev:(0.08) [77] conv:(2.73)
+42. BI-RADS assessment=5 Shape=4 266 ==> Density=3 Severity=1 224    <conf:(0.84)> lift:(1.95) lev:(0.11) [109] conv:(3.51)
+43. Density=3 Severity=0 459 ==> BI-RADS assessment=4 386    <conf:(0.84)> lift:(1.47) lev:(0.13) [123] conv:(2.66)
+44. Severity=0 516 ==> BI-RADS assessment=4 428    <conf:(0.83)> lift:(1.45) lev:(0.14) [133] conv:(2.49)
+45. Age='(44-70]' Severity=0 310 ==> BI-RADS assessment=4 257    <conf:(0.83)> lift:(1.45) lev:(0.08) [79] conv:(2.46)
+46. BI-RADS assessment=5 345 ==> Density=3 Severity=1 285    <conf:(0.83)> lift:(1.91) lev:(0.14) [136] conv:(3.21)
+47. BI-RADS assessment=4 Margin=1 344 ==> Density=3 Severity=0 278    <conf:(0.81)> lift:(1.69) lev:(0.12) [113] conv:(2.68)
+48. BI-RADS assessment=5 Severity=1 305 ==> Shape=4 241    <conf:(0.79)> lift:(1.76) lev:(0.11) [104] conv:(2.59)
+49. Margin=1 Severity=0 353 ==> BI-RADS assessment=4 Density=3 278    <conf:(0.79)> lift:(1.52) lev:(0.1) [94] conv:(2.23)
+50. BI-RADS assessment=5 Density=3 Severity=1 285 ==> Shape=4 224    <conf:(0.79)> lift:(1.75) lev:(0.1) [96] conv:(2.54)
+51. BI-RADS assessment=4 549 ==> Severity=0 428    <conf:(0.78)> lift:(1.45) lev:(0.14) [133] conv:(2.08)
+52. Margin=1 Density=3 359 ==> BI-RADS assessment=4 Severity=0 278    <conf:(0.77)> lift:(1.74) lev:(0.12) [118] conv:(2.43)
+53. BI-RADS assessment=4 Density=3 499 ==> Severity=0 386    <conf:(0.77)> lift:(1.44) lev:(0.12) [118] conv:(2.03)
+54. BI-RADS assessment=5 345 ==> Shape=4 266    <conf:(0.77)> lift:(1.72) lev:(0.12) [111] conv:(2.38)
+55. Margin=1 405 ==> Density=3 Severity=0 312    <conf:(0.77)> lift:(1.61) lev:(0.12) [118] conv:(2.25)
+56. BI-RADS assessment=5 Density=3 320 ==> Shape=4 246    <conf:(0.77)> lift:(1.71) lev:(0.11) [102] conv:(2.35)
+57. Margin=1 405 ==> BI-RADS assessment=4 Severity=0 311    <conf:(0.77)> lift:(1.72) lev:(0.14) [130] conv:(2.36)
+58. Shape=4 Density=3 395 ==> Severity=1 303    <conf:(0.77)> lift:(1.66) lev:(0.12) [120] conv:(2.28)
+59. Age='(44-70]' Severity=0 310 ==> BI-RADS assessment=4 Density=3 237    <conf:(0.76)> lift:(1.47) lev:(0.08) [76] conv:(2.01)
+60. Margin=1 405 ==> BI-RADS assessment=4 Density=3 308    <conf:(0.76)> lift:(1.46) lev:(0.1) [97] conv:(1.99)
+

@@ -1,0 +1,105 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -I -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.0 -S -1.0 -c -1
+Relation:     mammographic_masses-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R2-precision3-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToNominal-R3-weka.filters.unsupervised.attribute.NumericToNominal-R4-weka.filters.unsupervised.attribute.NumericToNominal-R5-weka.filters.unsupervised.attribute.NumericToNominal-R6
+Instances:    961
+Attributes:   6
+              BI-RADS assessment
+              Age
+              Shape
+              Margin
+              Density
+              Severity
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.2 (192 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 16
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 12
+
+Large Itemsets L(1):
+BI-RADS assessment=4 549
+BI-RADS assessment=5 346
+Age='(-inf-44]' 223
+Age='(44-70]' 594
+Shape=1 224
+Shape=2 211
+Shape=4 400
+Margin=1 357
+Margin=4 280
+Density=3 798
+Severity=0 516
+Severity=1 445
+
+Size of set of large itemsets L(2): 22
+
+Large Itemsets L(2):
+BI-RADS assessment=4 Age='(44-70]' 342
+BI-RADS assessment=4 Margin=1 316
+BI-RADS assessment=4 Density=3 446
+BI-RADS assessment=4 Severity=0 428
+BI-RADS assessment=5 Age='(44-70]' 217
+BI-RADS assessment=5 Shape=4 261
+BI-RADS assessment=5 Density=3 306
+BI-RADS assessment=5 Severity=1 306
+Age='(44-70]' Shape=4 268
+Age='(44-70]' Margin=1 194
+Age='(44-70]' Margin=4 195
+Age='(44-70]' Density=3 503
+Age='(44-70]' Severity=0 310
+Age='(44-70]' Severity=1 284
+Shape=4 Margin=4 192
+Shape=4 Density=3 360
+Shape=4 Severity=1 315
+Margin=1 Density=3 281
+Margin=1 Severity=0 316
+Margin=4 Density=3 241
+Density=3 Severity=0 405
+Density=3 Severity=1 393
+
+Size of set of large itemsets L(3): 15
+
+Large Itemsets L(3):
+BI-RADS assessment=4 Age='(44-70]' Density=3 288
+BI-RADS assessment=4 Age='(44-70]' Severity=0 257
+BI-RADS assessment=4 Margin=1 Density=3 253
+BI-RADS assessment=4 Margin=1 Severity=0 288
+BI-RADS assessment=4 Density=3 Severity=0 342
+BI-RADS assessment=5 Age='(44-70]' Density=3 192
+BI-RADS assessment=5 Shape=4 Density=3 236
+BI-RADS assessment=5 Shape=4 Severity=1 237
+BI-RADS assessment=5 Density=3 Severity=1 275
+Age='(44-70]' Shape=4 Density=3 243
+Age='(44-70]' Shape=4 Severity=1 204
+Age='(44-70]' Density=3 Severity=0 250
+Age='(44-70]' Density=3 Severity=1 253
+Shape=4 Density=3 Severity=1 284
+Margin=1 Density=3 Severity=0 247
+
+Size of set of large itemsets L(4): 3
+
+Large Itemsets L(4):
+BI-RADS assessment=4 Age='(44-70]' Density=3 Severity=0 213
+BI-RADS assessment=4 Margin=1 Density=3 Severity=0 229
+BI-RADS assessment=5 Shape=4 Density=3 Severity=1 216
+
+Best rules found:
+
+ 1. Margin=1 Density=3 Severity=0 247 ==> BI-RADS assessment=4 229    <conf:(0.93)> lift:(1.62) lev:(0.09) [87] conv:(5.57)
+ 2. BI-RADS assessment=5 Shape=4 Density=3 236 ==> Severity=1 216    <conf:(0.92)> lift:(1.98) lev:(0.11) [106] conv:(6.03)
+ 3. Margin=1 Severity=0 316 ==> BI-RADS assessment=4 288    <conf:(0.91)> lift:(1.6) lev:(0.11) [107] conv:(4.67)
+ 4. BI-RADS assessment=4 Margin=1 316 ==> Severity=0 288    <conf:(0.91)> lift:(1.7) lev:(0.12) [118] conv:(5.05)
+ 5. BI-RADS assessment=5 Shape=4 Severity=1 237 ==> Density=3 216    <conf:(0.91)> lift:(1.1) lev:(0.02) [19] conv:(1.83)
+ 6. BI-RADS assessment=5 Shape=4 261 ==> Severity=1 237    <conf:(0.91)> lift:(1.96) lev:(0.12) [116] conv:(5.61)
+ 7. Age='(44-70]' Shape=4 268 ==> Density=3 243    <conf:(0.91)> lift:(1.09) lev:(0.02) [20] conv:(1.75)
+ 8. BI-RADS assessment=4 Margin=1 Density=3 253 ==> Severity=0 229    <conf:(0.91)> lift:(1.69) lev:(0.1) [93] conv:(4.69)
+ 9. BI-RADS assessment=5 Shape=4 261 ==> Density=3 236    <conf:(0.9)> lift:(1.09) lev:(0.02) [19] conv:(1.7)
+10. Shape=4 Severity=1 315 ==> Density=3 284    <conf:(0.9)> lift:(1.09) lev:(0.02) [22] conv:(1.67)
+
